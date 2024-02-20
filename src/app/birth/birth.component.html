@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <button class="btn btn-primary">Add New</button>
+  <table class="table table-bordered">
+    <thead>
+    <tr>
+      <td>First Name</td>
+      <td>Last Name</td>
+      <td>Zone</td>
+      <td>Woreda</td>
+      <td>Qebelie</td>
+      <td>Date of Birth</td>
+      <td colspan="2">Actions</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let birth of births">
+       <td>{{birth.firstName}}</td>
+      <td>{{birth.lastName}}</td>
+      <td>{{birth.zone}}</td>
+      <td>{{birth.woreda}}</td>
+      <td>{{birth.qebelie}}</td>
+      <td>{{birth.dateOfBirth | date}}</td>
+      <td class="btn btn-info">Edit</td>
+      <td class="btn btn-warning">Delete</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
